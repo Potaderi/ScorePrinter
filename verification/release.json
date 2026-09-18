@@ -2,8 +2,12 @@
   "validated_on": "2026-09-18",
   "python": "3.13",
   "musescore": "4.6.3",
-  "unit_tests": 32,
-  "archive_sha256": "e0a75af50632f6a36b4af2f7cc01f286cdc4709f94b564cf3744b029e79c605d",
+  "audiveris": "5.11.0",
+  "unit_tests": 61,
+  "script_count": 13,
+  "archive": "dist/musescore-score-reproduction.zip",
+  "archive_sha256": "b9d67a7be2f06c76470a1f1404d5d677dbc9b32667fb6a6bde5c246c38c41786",
+  "archive_bytes": 253097,
   "artifact_sha256": {
     "scores/greensleeves-four-voices.mscz": "7d5ad3a12a20f68448b0078342a009f03468db90c28167b3832bb32f165516ac",
     "scores/greensleeves.mscz": "ae707dc0caea117bb42b1b4f9ea763aff3c50cffbb85a280b14309c008a8a1b6",
@@ -13,5 +17,7 @@
     "renders/ode-1.png": "b580efa901ef8fc69cceae3ed701705c2900bb482e1f10b955060da64978dc32",
     "renders/ode.pdf": "6edbda8e03187a00acb391b5b5fecd124daa17988cd236ea1f47229faf452b71"
   },
-  "notes": "Automated comparisons cover documented notation scope; new jobs require independent source review."
+  "new_pdf_validation": "verification/new-pdf-validation.json",
+  "notes": "New PDF jobs require Audiveris/OMR, complete source-page review, targeted correction and whole-job finalization. Demonstrations do not certify arbitrary input automatically.",
+  "zip_extracted_tests": "61 passed"
 }

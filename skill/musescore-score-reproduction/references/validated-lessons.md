@@ -23,3 +23,12 @@ Read the relevant section when extending beyond the bundled examples. These are 
 - [Export](https://handbook.musescore.org/file-management/file-export): use PDF/PNG for visible content and MusicXML for structured comparison.
 
 The installed executable's --help takes precedence when older CLI documentation differs. Arbitrary LilyPond, OMR accuracy, complex ornaments/repeats, cross-staff notation and audio equivalence were not established by these examples.
+
+
+## Lessons from previously unseen PDFs
+
+- A successful OMR process can omit whole staves. The two-page scan lost three staff instances without warning. Independently inspecting original page coverage is essential; input/output roundtrip equality cannot catch this.
+- Binarizing a low-resolution scan into a separate 300 DPI engine input recovered those three staves. This is a demonstrated fallback, not a default operation to apply blindly to all images.
+- OMR note accuracy and symbol accuracy differ. Even after 229 note events matched, fermatas misread as staccatos and missing ties still needed correction. Check expression, lyrics and repeat structure explicitly.
+- Audiveris 5.11.0's default legacy OCR needs the full Tesseract model; tessdata_fast lacks legacy components. Engine logs exposed this; setup includes the compatible full model.
+- Fix a single omitted note with a guarded patch/rebuild, not an entire new OMR pass. The scan repair was checked against a withheld source and rendered original, with an explicit source-reading reason recorded.

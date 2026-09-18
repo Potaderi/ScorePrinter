@@ -1,56 +1,55 @@
 ---
 name: musescore-score-reproduction
-description: Transcribe a PDF or image score into editable MuseScore MSCZ using bundled entry, conversion, reference-audit and visual-review scripts. Use for source-faithful musical content, including multi-voice scores and pickup measures. Scripts do not replace independent reading of the reference.
+description: Turn a new sheet-music PDF into editable MuseScore MSCZ using local OMR, complete-page inspection, targeted correction and source verification. Use for unfamiliar scores, multipage scans and notation beyond the bundled examples; continue correcting the actual source instead of merely running a demo.
 metadata:
-  short-description: Scripted transcription and source-based verification
+  short-description: New PDF recognition, correction and MSCZ verification
 ---
 
-# MuseScore transcription toolkit
+# New PDF to verified MuseScore score
 
-This folder is self-contained: copy the entire folder, not just SKILL.md. Python 3.10+ and an installed MuseScore executable are needed. Core scripts use only the standard library. PDF previews optionally use PyMuPDF. No script installs a skill, changes global configuration, or downloads an executable.
+The task is the user's NEW PDF, not reproducing the bundled examples. Start with that PDF. Do not require the user to supply a note JSON, LilyPond, or independent MusicXML. The executing agent is responsible for source reading, correcting recognition errors, checking every original page and delivering the editable score. OMR output is a draft, not completion.
 
-Read [references/quickstart.md](references/quickstart.md) for executable commands and the new-task workflow. Read [references/input-format.md](references/input-format.md) before entering a JSON score. For exact coverage, exit codes and manual review requirements, read [references/verification.md](references/verification.md).
+Read [references/new-pdf.md](references/new-pdf.md) first: it contains runnable setup, PDF entry, resume, preprocessing, patching, rebuilding and acceptance commands. Read [references/verification.md](references/verification.md) for comparison boundaries; use [references/input-format.md](references/input-format.md) only when simpler regions need manual JSON entry.
 
-## Fast path
+## Default entry
 
-From the skill folder, run:
+From this skill folder:
 
 ```text
-python scripts/demo.py --musescore /absolute/path/to/MuseScore4.exe --out /new/project/demo
+python scripts/pdf_to_mscz.py run USER.pdf --out NEW_JOB --engine-config ENGINE/engine-config.json --musescore /path/to/MuseScore --deps PROJECT/deps
 ```
 
-This builds the bundled 16-measure Ode from compact entry data, independently parses the publisher's LilyPond notes, creates a real MSCZ, reopens it, exports PDF/PNG/MusicXML, and reports differences. The output contains `result/score.mscz`, `audit.json`, `review.json`, provenance hashes and logs. This is a tested example, not a command that transcribes an arbitrary PDF automatically.
+Python 3.10+, MuseScore, Audiveris and PyMuPDF are required for this path. If Audiveris is not present, `setup_omr.py --out PROJECT/tools/audiveris` explicitly downloads hash-pinned Windows packages and extracts them inside the project, including compatible English OCR data. It does not register a system installation. Other OS packages are available from the official Audiveris releases. Preserve the user's files and use portable MuseScore when existing settings must not change.
 
-## New score workflow
+If OMR is unavailable, use `run ... --prepare-only` for the source-page workbench, read its images and enter the music with MuseScore/MusicXML. This is a fallback for the actual PDF, never an excuse to substitute Ode or another example.
 
-1. Create an isolated project. Preserve source PDF, URL, license and SHA-256 using `source_project.py`. Use a portable MuseScore build when existing application settings must be preserved: environment variables alone do not isolate all Windows/macOS preferences. Do not silently install software or modify files outside the requested project.
-2. Read the relevant [official handbook](https://handbook.musescore.org/): note/rest entry, multiple voices, slurs/ties, beams, measure properties, MusicXML and export. Check executable `--help` because the handbook's CLI page includes older options.
-3. Crop the source with `pdf_review.py`. Record every staff and voice, pickup/last-bar durations, pitch spelling, dots, rests, notation and structure. With JSON entry, `build_score.py` catches underfilled measures, unknown fields and invalid ties before MuseScore import. For notation beyond the entry schema, use MuseScore GUI or explicit MusicXML; never approximate it to fit the schema.
-4. Use a reference independent of the candidate. Prefer publisher MusicXML; the bundled `lilypond_reference.py` accepts only its documented absolute-pitch subset and rejects unknown syntax. When only a PDF exists, independently reread or second-enter the reference. Comparing a candidate to its own input proves conversion fidelity, not reading accuracy. Do not fabricate a source reference by exporting the candidate.
-5. Run `score_pipeline.py convert`. It produces a fresh output directory, checks the MSCZ archive, reopens the saved file in another process, renders it, and runs `musicxml_audit.py`. Fix every reported mismatch at its part/measure/staff/onset and rerun into a new directory.
-6. Review the original source against the actual output PDF per measure. Explicit accidental display, stems and beams need `--display` with a compatible independent reference or direct visual review. Check all text, expressive notation, repeats and unsupported constructs present in the source. An automated PASS covers only the report's listed fields.
-7. Fill `review.json` with actual evidence, never automatic pass flags. Run `score_pipeline.py finalize`. It rejects missing review rows, mismatches, unresolved unsupported features and changed file hashes. It validates the review record; it cannot prove the honesty or correctness of a review assertion.
+## Work until the actual source is handled
 
-## Invariants that prevent common mistakes
+1. **Read the source inventory before trusting recognition.** Inspect every page, record systems, staves, parts, measure ranges, clefs, signatures, pickup/last-bar lengths and non-note musical content. Include lyrics, chord symbols, tuplets, ornaments, repeats, endings, transpositions, percussion or tablature where present. Empty OMR output does not mean a source page is empty. Encrypted PDFs must first be legitimately unlocked; ambiguous/missing pixels cannot be reconstructed with certainty.
+2. **Run the generic pipeline.** It preserves the PDF, renders all pages and overlapping strips, runs local Audiveris, retains every exported work/movement and OMR project, creates real MSCZ files, reopens them, exports PDF/PNG/MusicXML and records structured differences. Nothing in this path selects notes by title, filename or known score hash.
+3. **Fix missing coverage first.** Inspect `index.html`, `triage.json` and all source pages. Independent five-line pixel hints help detect omitted staves, but are conservative and cannot cover every notation style. Complete pages/systems omitted by OMR must be transcribed. Check candidate part names/counts against the source. For a scan with broken gray lines, a targeted retry with `--binarize 190 --omr-dpi 300` can help. A second evidence-based retry may be useful; otherwise correct the failed region rather than repeatedly rescanning the whole book.
+4. **Correct only what needs changing.** Use Audiveris's saved `.omr` editor for system/staff structure; use MuseScore, explicit MusicXML, or guarded `musicxml_patch.py` for symbols, notes and measures. `pdf_to_mscz.py rebuild` creates a new revision without rerunning OMR; `resume` reuses cached exports after interrupted conversions. A patch checks its input hash, exact target, old value and source-reading reason. For omissions outside the simple JSON builder, retain full MusicXML: do not flatten tuplets, grace notes, cross-staff chords, lyrics, complex repeats or instrumental notation to fit a convenience schema.
+5. **Independently reread the original.** Compare each rendered output measure to source pixels. A publisher MusicXML of the same edition is useful if available, but is not a prerequisite. A self-roundtrip only tests conversion. OMR grades, pixel similarity, equal MIDI pitches and a green exit code do not prove source fidelity. Source inventory must catch omissions from both the candidate and its reference. Use high-resolution bands/crops rather than repeatedly scanning whole-page thumbnails.
+6. **Verify the complete PDF and final revision.** Fill each current score's `review.json` and whole-job `source-review.json` with actual reviewed evidence. Resolve coverage findings and unsupported symbols explicitly, and include every work/movement. Then run `pdf_to_mscz.py finalize JOB`. A new PDF must use this outer acceptance gate; the lower-level score gate alone misses whole-source omissions. Changed/failed revisions invalidate previous completion. Never fill all review rows automatically.
+7. **Deliver the current MSCZ(s) and evidence.** Do not stop at a pending ledger when source images are readable and you can continue editing. If some source information is genuinely unreadable, give its exact page/system/crop and complete the rest; request only the missing musical information. Do not claim arbitrary PDF/handwriting recognition is guaranteed or mark uncertainty as 100% correct.
 
-- Pitch tokens are absolute and literal: `F4` is F natural even under a G-major key signature; write `F#4` when intended. Do not conflate enharmonic spelling.
-- Keep voice identities for the audit version. Use `--merge-voices` only for intentional print condensation and retain the voice-preserving MSCZ. It drops voice identity and exact duplicate events by design; that mode cannot certify the independent voice allocation.
-- Slurs and ties must have correct start/end note anchors, not just the correct count. Backup/forward and chords affect onset calculations. Short final bars may export as `X1`; compare ordinal measure positions separately from displayed labels.
-- A new unknown notation produces REVIEW_REQUIRED, not a success. Annotating a note with an unsupported feature is not permission to omit it.
-- Fine typography, page margins and decorative credit layout are excluded unless the user requests them. Missing musical text, ambiguous accidental display, incorrect beams and collisions that hide content are not cosmetic differences.
-- Preserve original output files. The pipeline and entry tools refuse existing output destinations. Close ZIP handles before MuseScore writes an archive. Windows portable MuseScore may have `qwindows.dll` without an offscreen plugin.
+The user normally wants exact musical content, not identical fonts/margins. Musical text, accidental meaning, beams and collisions that conceal content are relevant. Read the [official handbook](https://handbook.musescore.org/) sections needed for the source's notation; [validated lessons](references/validated-lessons.md) links the specific sections and observed failures.
 
-## Tool index
+## Tool routing
 
-| Tool | Use |
+| Tool | Purpose |
 |---|---|
-| `scripts/build_score.py` | Compact JSON -> rhythm-checked MusicXML |
-| `scripts/lilypond_reference.py` | Independent narrow source parser; rejects unsupported syntax |
-| `scripts/musicxml_audit.py` | Detailed source/candidate event, structure and notation differences |
-| `scripts/score_pipeline.py` | Doctor, MSCZ import/reopen/export/audit, final review gate |
-| `scripts/source_project.py` | Source download/hash and protected-file snapshots |
-| `scripts/pdf_review.py` | Original/render PNG pages, strips and side-by-side HTML |
-| `scripts/demo.py` | One-command complete reproducible example |
-| `scripts/scorelib.py` | Shared rational-time parser and comparison core |
+| `pdf_to_mscz.py` | Main new-PDF job: run, resume, rebuild, status, whole-PDF finalize |
+| `setup_omr.py` | Explicit hash-pinned project-local Windows OMR setup with full English OCR data |
+| `omr_engine.py` | Audiveris batch execution, saved project and symbol/system diagnostics |
+| `staff_inventory.py` | Independent five-line pixel hints to flag possible omitted staves |
+| `musicxml_patch.py` | Guarded targeted XML corrections retaining other notation |
+| `score_pipeline.py` | Lower-level MSCZ creation/reopening/audit and per-score review |
+| `musicxml_audit.py`, `scorelib.py` | Rational-time events, voice/staff, span and supported notation comparison |
+| `build_score.py` | Fast rhythm-checked JSON entry for supported simple regions |
+| `lilypond_reference.py` | Optional independent publisher-reference parser for a narrow absolute-pitch subset |
+| `source_project.py` | Download provenance and protected-file hash snapshots |
+| `pdf_review.py` | Standalone source/render page comparison |
+| `demo.py` | Environment self-test only, never the user's transcription task |
 
-Run `python -m unittest discover -s tests -v` to verify mutation detection before trusting a changed toolkit. Read [references/validation.md](references/validation.md) for recorded real-score integration results. [references/validated-lessons.md](references/validated-lessons.md) records the specific observed pitfalls.
+Scripts are in `scripts/`. Keep the whole skill folder together. Core comparison and patch scripts use the standard library; PDF jobs need PyMuPDF. Run `python -m unittest discover -s tests -v`; with PyMuPDF importable the suite includes real PDF page preparation. [Validation evidence](references/validation.md) separates old fixtures, unseen PDF integration, deliberate errors, and remaining unsupported verification. The older [quickstart](references/quickstart.md) documents manual entry/demo tools; it is not the default new-PDF path.

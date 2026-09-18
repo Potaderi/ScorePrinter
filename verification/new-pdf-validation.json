@@ -1,0 +1,79 @@
+{
+  "validated_on": "2026-09-18",
+  "environment": {
+    "os": "Windows",
+    "python": "3.13",
+    "musescore": "4.6.3",
+    "audiveris": "5.11.0"
+  },
+  "unit_tests": 61,
+  "engine_setup": {
+    "project_local_extraction": "PASS",
+    "english_ocr": "Official full tessdata 4.1.0 legacy-compatible model; fast LSTM-only model was rejected during research and not used in final setup"
+  },
+  "minuet": {
+    "source_url": "https://www.mutopiaproject.org/ftp/BachJS/BWVAnh114/anna-magdalena-04/anna-magdalena-04-a4.pdf",
+    "source_sha256": "6b34ba44122d9694156a113c749eee0bf3232f54ead431a44be6f2a1b6f32c8b",
+    "pages": 1,
+    "musescore_generated": true,
+    "events": 207,
+    "roundtrip_status": "REVIEW_REQUIRED",
+    "recognized_grade_is_accuracy": false,
+    "engine_seconds": 15.2,
+    "unresolved_issues": 16
+  },
+  "scan_holdout": {
+    "source_musicxml_url": "https://raw.githubusercontent.com/cuthbertLab/music21/master/music21/corpus/bach/bwv269.mxl",
+    "source_musicxml_sha256": "9676f11a2b26488bcf30db90c15576caa1ea2a616b909e376d44b8b804e9d138",
+    "method": "Independent MusicXML rendered to PDF, then flattened to 200 DPI page images. Only the resulting PDF was supplied to recognition; the withheld source was used afterwards to localize errors and audit corrections.",
+    "pdf_sha256": "9668acedaaec86112ffb61a17e7aac2637aea399c6496f8a75ae86832b16024b",
+    "pages": 2,
+    "independent_staff_hints": 12,
+    "attempts": [
+      {
+        "attempt": 1,
+        "binarization_threshold": null,
+        "seconds": 18.72,
+        "engine_exit": 0,
+        "recognized_staves": 9,
+        "independent_missing_staff_hints": 3
+      },
+      {
+        "attempt": 2,
+        "binarization_threshold": 190,
+        "seconds": 21.58,
+        "engine_exit": 0,
+        "recognized_staves": 12,
+        "independent_missing_staff_hints": 0
+      }
+    ],
+    "targeted_correction": "Insert the omitted Alto B3 quarter in ordinal measure 3, confirmed from original PDF and withheld reference. Rebuild without rerunning OMR.",
+    "corrected_note_events": 229,
+    "reference_note_events": 229,
+    "event_missing": 0,
+    "event_extra": 0,
+    "roundtrip_status": "REVIEW_REQUIRED",
+    "independent_full_scope_status": "FAIL",
+    "remaining_differences": {
+      "events": {
+        "missing": 0,
+        "extra": 0
+      },
+      "attributes": {
+        "missing": 4,
+        "extra": 4
+      },
+      "marks": {
+        "missing": 26,
+        "extra": 22
+      },
+      "measures": {
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    "full_score_accepted": false,
+    "remaining_work": "Expression marks, ties/barlines, key-mode metadata differences, lyrics and complete source review remain. No universal or full-score accuracy certification."
+  },
+  "old_examples_are_required_inputs": false
+}

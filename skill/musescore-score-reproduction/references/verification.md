@@ -18,3 +18,12 @@ Not certified: graphical placement, the meaning of arbitrary text, printed accid
 `score_pipeline.py convert` deliberately leaves `review.json` pending. The reviewer compares original source to exported PDF, fills every part/measure/staff row with `source_content: pass`, `notation_and_beams: pass`, and concrete evidence (page/system, marks inspected, any corrected discrepancy). Set reviewer/method and `reference_independently_checked` truthfully. Unsupported issue resolutions must quote each exact issue, status and evidence. `finalize` checks complete coverage and hashes; it does not claim to verify the truth of these assertions.
 
 Do not provide a script that fills all review rows with pass automatically. Do not promote `transcription-roundtrip` to `independent-reference` simply because both files look alike. A changed MSCZ, PDF, reference or audit invalidates acceptance and requires fresh review.
+
+
+## Whole-PDF acceptance
+
+For a `pdf_to_mscz.py` job, use its `finalize JOB`, not only the lower-level score finalizer. It additionally requires every source page exactly once, musical/non-musical classification with evidence, a source-system/staff/measure inventory, mappings covering all output scores, current MSCZ hashes and resolutions for independently detected possible missing staves. A failed latest revision cannot fall back silently to an earlier accepted file. These checks validate complete review records; the reviewer must actually inspect the images.
+
+`run`, `resume` and `rebuild` return 0 when each current candidate has a generated MSCZ, 1 when a complete candidate set is unavailable, and 2 for execution errors. Status REVIEW_REQUIRED or NEEDS_CORRECTION still requires work. Only the whole-job finalizer can return accepted status. Nonempty PDFs with no detectable music produce source pages and NEEDS_TRANSCRIPTION, not an invented score.
+
+Five-line coverage hints work with long, nearly horizontal printed staff lines. False positives and missed short/rotated/broken/tab/handwritten staves are possible. A high OMR grade is not a calibrated probability; low grades only prioritize review. The source PDF is never overwritten by binarization/rotation; transformed inputs belong to an explicit new attempt. Cached OMR and earlier revisions remain available.

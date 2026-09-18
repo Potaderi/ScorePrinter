@@ -1,3 +1,5 @@
+> For a new user PDF, start with [new-pdf.md](new-pdf.md). The commands below cover the demo and manual-entry subtools, not the default PDF workflow.
+
 # 快速开始
 
 整个 skill 文件夹可以独立复制到另一台电脑。脚本不依赖此次项目中的 `scripts/`、固定工作目录或你的个人配置。需要 Python 3.10+ 和 MuseScore；只有 PDF 裁图额外需要 PyMuPDF。

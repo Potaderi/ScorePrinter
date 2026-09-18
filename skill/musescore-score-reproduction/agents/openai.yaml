@@ -1,4 +1,4 @@
 interface:
-  display_name: "MuseScore transcription and verification"
-  short_description: "Build editable scores with source-based verification"
-  default_prompt: "Use $musescore-score-reproduction to transcribe this reference into MSCZ, run the bundled checks, and review every measure."
+  display_name: "New PDF to MuseScore with correction"
+  short_description: "Recognize new PDFs, repair errors and verify MSCZ"
+  default_prompt: "Use $musescore-score-reproduction on this new PDF, run local recognition, correct missing or wrong music, and verify every original page before delivering MSCZ."
