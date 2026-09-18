@@ -1,0 +1,84 @@
+{
+  "title": "Greensleeves",
+  "composer": "Traditional",
+  "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1247",
+  "source_sha256": "e580b31e882580d7f96d52e8aafd79b8e2f4e89ad9b32c360af9f5814a2d7a37",
+  "key": 1,
+  "time": [
+    6,
+    8
+  ],
+  "time_symbol": "normal",
+  "staves": [
+    {
+      "sign": "G",
+      "line": 2
+    },
+    {
+      "sign": "F",
+      "line": 4
+    }
+  ],
+  "voices": [
+    {
+      "id": "soprano",
+      "staff": 1,
+      "variable": "Soprano"
+    },
+    {
+      "id": "alto",
+      "staff": 1,
+      "variable": "Alto"
+    },
+    {
+      "id": "tenor",
+      "staff": 2,
+      "variable": "Tenor"
+    },
+    {
+      "id": "bass",
+      "staff": 2,
+      "variable": "Bass"
+    }
+  ],
+  "lengths": [
+    "1/2",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "3",
+    "5/2"
+  ],
+  "first_number": 0,
+  "measure_annotations": {
+    "7": {
+      "break": "system"
+    },
+    "12": {
+      "break": "system"
+    }
+  },
+  "trailing_spacer": "1/2",
+  "note_marks": [
+    {
+      "at": [
+        6,
+        "alto",
+        2
+      ],
+      "accidental": "natural",
+      "parentheses": true
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MuseScore transcription and verification"
+  short_description: "Build editable scores with source-based verification"
+  default_prompt: "Use $musescore-score-reproduction to transcribe this reference into MSCZ, run the bundled checks, and review every measure."

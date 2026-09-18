@@ -1,0 +1,17 @@
+{
+  "validated_on": "2026-09-18",
+  "python": "3.13",
+  "musescore": "4.6.3",
+  "unit_tests": 32,
+  "archive_sha256": "e0a75af50632f6a36b4af2f7cc01f286cdc4709f94b564cf3744b029e79c605d",
+  "artifact_sha256": {
+    "scores/greensleeves-four-voices.mscz": "7d5ad3a12a20f68448b0078342a009f03468db90c28167b3832bb32f165516ac",
+    "scores/greensleeves.mscz": "ae707dc0caea117bb42b1b4f9ea763aff3c50cffbb85a280b14309c008a8a1b6",
+    "scores/ode.mscz": "9c7fa57ca12aef795d13630cdd059a95c6969dcdbe9181930ea2c3533d84ad1e",
+    "renders/greensleeves-1.png": "752c41c64b2637cea8adc273621ddf7148c50f267b99f44fd481b335e6e441f1",
+    "renders/greensleeves.pdf": "14f212001d9df18484e64c4adf54bb434564c31477b03c6bbdd69878454a4cfb",
+    "renders/ode-1.png": "b580efa901ef8fc69cceae3ed701705c2900bb482e1f10b955060da64978dc32",
+    "renders/ode.pdf": "6edbda8e03187a00acb391b5b5fecd124daa17988cd236ea1f47229faf452b71"
+  },
+  "notes": "Automated comparisons cover documented notation scope; new jobs require independent source review."
+}

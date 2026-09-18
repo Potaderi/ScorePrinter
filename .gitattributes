@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.ly -text whitespace=-blank-at-eol,-blank-at-eof
+*.pdf binary
+*.png binary
+*.mscz binary
+*.zip binary

@@ -1,0 +1,100 @@
+{
+  "title": "Pickup example",
+  "composer": "Replace with source credit",
+  "key": 1,
+  "time": [
+    6,
+    8
+  ],
+  "staves": [
+    {
+      "sign": "G",
+      "line": 2
+    },
+    {
+      "sign": "F",
+      "line": 4
+    }
+  ],
+  "voices": [
+    {
+      "id": "upper",
+      "staff": 1
+    },
+    {
+      "id": "lower",
+      "staff": 2
+    }
+  ],
+  "measures": [
+    {
+      "number": 0,
+      "length": "1/2",
+      "voices": {
+        "upper": "E4e",
+        "lower": "E3e"
+      }
+    },
+    {
+      "voices": {
+        "upper": "G4q A4e B4e. C5s B4e",
+        "lower": "[E3,B3]q [F#3,A3]e G3q [G3,B3]e"
+      }
+    },
+    {
+      "length": "5/2",
+      "barline": "light-heavy",
+      "voices": {
+        "upper": "E4q. E4q",
+        "lower": "E3q. E3q"
+      }
+    }
+  ],
+  "slurs": [
+    {
+      "start": [
+        2,
+        "upper",
+        4
+      ],
+      "end": [
+        2,
+        "upper",
+        5
+      ]
+    }
+  ],
+  "note_marks": [
+    {
+      "at": [
+        2,
+        "upper",
+        3
+      ],
+      "beams": [
+        "begin"
+      ]
+    },
+    {
+      "at": [
+        2,
+        "upper",
+        4
+      ],
+      "beams": [
+        "continue",
+        "backward hook"
+      ]
+    },
+    {
+      "at": [
+        2,
+        "upper",
+        5
+      ],
+      "beams": [
+        "end"
+      ]
+    }
+  ]
+}
