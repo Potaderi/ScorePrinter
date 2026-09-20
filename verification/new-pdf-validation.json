@@ -75,5 +75,7 @@
     "full_score_accepted": false,
     "remaining_work": "Expression marks, ties/barlines, key-mode metadata differences, lyrics and complete source review remain. No universal or full-score accuracy certification."
   },
-  "old_examples_are_required_inputs": false
+  "old_examples_are_required_inputs": false,
+  "followup": "verification/notation-validation.json",
+  "historical_record_as_of": "2026-09-18; remaining differences below were corrected in the linked followup"
 }

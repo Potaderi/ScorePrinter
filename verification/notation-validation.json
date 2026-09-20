@@ -1,0 +1,75 @@
+{
+  "validated_on": "2026-09-20",
+  "unit_tests": 92,
+  "script_count": 16,
+  "environment": {
+    "python": "3.13.5",
+    "musescore": "4.6.3",
+    "audiveris": "5.11.0"
+  },
+  "scan_correction": {
+    "source_url": "https://raw.githubusercontent.com/cuthbertLab/music21/master/music21/corpus/bach/bwv269.mxl",
+    "reference_sha256": "9676f11a2b26488bcf30db90c15576caa1ea2a616b909e376d44b8b804e9d138",
+    "pdf_sha256": "9668acedaaec86112ffb61a17e7aac2637aea399c6496f8a75ae86832b16024b",
+    "method": "PDF-only OMR followed by note repair; independently withheld source used to propose notation repairs. Final saved MSCZ reopened, compared including display scope, and both pages viewed.",
+    "events": 229,
+    "marks": {
+      "lyric": 52,
+      "fermata": 24,
+      "repeat": 4,
+      "barline": 4,
+      "tie": 4
+    },
+    "status": "PASS",
+    "differences": {
+      "events": {
+        "missing": [],
+        "extra": []
+      },
+      "attributes": {
+        "missing": [],
+        "extra": []
+      },
+      "marks": {
+        "missing": [],
+        "extra": []
+      },
+      "measures": {
+        "missing": [],
+        "extra": []
+      },
+      "labels": {
+        "missing": [],
+        "extra": []
+      },
+      "display": {
+        "missing": [],
+        "extra": []
+      }
+    },
+    "issues": [],
+    "whole_job_accepted": false,
+    "pending": "Per-measure review attestation ledger; no automatic approval population.",
+    "mscz_sha256": "610396ca60384680249a27037711ba69dd4e90045b481085e5c4d21b88502d8c",
+    "artifact": "verification/bwv269-correction/score.mscz",
+    "audit": "verification/bwv269-correction/independent-audit.json"
+  },
+  "combined_notation_roundtrip": {
+    "status": "PASS",
+    "events": 8,
+    "features": [
+      "lyrics",
+      "mordent",
+      "fingering",
+      "fermata",
+      "harmony",
+      "wedge"
+    ],
+    "audit": "verification/notation-roundtrip/audit.json"
+  },
+  "cached_triage_seconds": [
+    0.161,
+    0.031
+  ],
+  "universal_accuracy_guarantee": false
+}

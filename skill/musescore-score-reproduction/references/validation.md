@@ -35,3 +35,9 @@ A second holdout used a BWV 269 four-part source, rendered and flattened into a 
 - Full-score accuracy was NOT established: expression marks, ties/barlines, key-mode metadata and lyrics still need work/review. The independent full-scope audit remained FAIL, and the pipeline kept review pending. This failure is preserved rather than mislabeled as perfect transcription.
 
 The public repository's verification/new-pdf-validation.json records source URLs/hashes, timing, coverage counts and scope-limited results. These inputs are integration cases, not a lookup table: recognition code has no known-title, filename or source-hash branch. Ordinary printed music is the tested OMR case; handwriting, tablature, percussion, severe skew/blur and every complex notation style have not been comprehensively verified. The skill instructs the executing agent to use source images and full MuseScore/MusicXML editing for unsupported regions and to continue correcting, not return an unreviewed draft as complete.
+
+## Expanded notation and corrections (2026-09-20)
+
+92 tests pass with PyMuPDF, including notation mutations, guarded reference repairs, changed-measure context, diagnostic/crop caching and stale-checker rejection. A separate real MuseScore combined-notation roundtrip passes, as does the original Ode demo.
+
+The earlier BWV269 failure is now repaired with guarded patches. The saved MSCZ was reopened: independent comparison including accidental/stem/beam fields has zero differences and no unsupported issues. Its 229 events, 52 lyrics, 24 fermatas, four ties, repeats and part labels match. Both source/output pages were visually inspected. The whole-job per-measure attestation ledger remains pending; this records semantic/display equality, not completed whole-job acceptance or a universal guarantee. Reproducible patches and final artifacts are published under verification/bwv269-correction/.

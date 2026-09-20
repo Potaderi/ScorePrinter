@@ -1,0 +1,45 @@
+{
+  "input_sha256": "a4529c66022b435ec62c8a5d1e7d1ab5029a7399a41cb9838fa43c825f24ba9b",
+  "operations": [
+    {
+      "scope": "document",
+      "reason": "Source page 1 labels Soprano, Alto, Tenor, Bass; later systems use S., A., T., B.; independently confirmed against source PDF",
+      "select": "part-list/score-part[1]/part-abbreviation",
+      "op": "text",
+      "before": "Soprano",
+      "after": "S."
+    },
+    {
+      "scope": "document",
+      "reason": "Source page 1 labels Soprano, Alto, Tenor, Bass; later systems use S., A., T., B.; independently confirmed against source PDF",
+      "select": "part-list/score-part[2]/part-abbreviation",
+      "op": "text",
+      "before": "Alto",
+      "after": "A."
+    },
+    {
+      "scope": "document",
+      "reason": "Source page 1 labels Soprano, Alto, Tenor, Bass; later systems use S., A., T., B.; independently confirmed against source PDF",
+      "select": "part-list/score-part[3]/part-abbreviation",
+      "op": "text",
+      "before": "Tenor",
+      "after": "T."
+    },
+    {
+      "scope": "document",
+      "reason": "Source page 1 labels Soprano, Alto, Tenor, Bass; later systems use S., A., T., B.; independently confirmed against source PDF",
+      "select": "part-list/score-part[4]/part-name",
+      "op": "text",
+      "before": "Voice",
+      "after": "Bass"
+    },
+    {
+      "scope": "document",
+      "reason": "Source page 1 labels Soprano, Alto, Tenor, Bass; later systems use S., A., T., B.; independently confirmed against source PDF",
+      "select": "part-list/score-part[4]/part-abbreviation",
+      "op": "text",
+      "before": "Voice",
+      "after": "B."
+    }
+  ]
+}

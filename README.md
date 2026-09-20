@@ -46,7 +46,7 @@ python skill/musescore-score-reproduction/scripts/pdf_to_mscz.py finalize "D:/sc
 
 将整个 [musescore-score-reproduction](skill/musescore-score-reproduction/) 文件夹交给代理，或下载 [skill ZIP](dist/musescore-score-reproduction.zip)。入口 [SKILL.md](skill/musescore-score-reproduction/SKILL.md) 明确要求从用户的新 PDF 开始，执行者持续纠错并检查完整原谱，不能停在示例或待办清单。
 
-工具包现有 13 个 Python 文件：
+工具包现有 16 个 Python 文件：
 
 | 工具 | 用途 |
 | --- | --- |
@@ -72,14 +72,22 @@ python skill/musescore-score-reproduction/scripts/pdf_to_mscz.py finalize "D:/sc
 | 全新 Mutopia《Menuet in G》PDF | 识谱、MSCZ 生成、回读、裁图和待核对记号定位 |
 | BWV 269 两页四声部纯扫描 PDF | 首轮独立检出漏掉的 3 个谱表；预处理后恢复全部 12 个谱表；再定位并补入一个漏音，229 个音符事件与保留的独立参考一致 |
 
-第二项不意味着全谱已完美：独立核查还发现表情/连线等差异，歌词也需复核。报告保留这些问题，不会因为音符对齐就把整谱标成通过。测试范围及证据见 [验证说明](skill/musescore-score-reproduction/references/validation.md)和[新 PDF 集成记录](verification/new-pdf-validation.json)。
+2026-09-20 补齐：已修正该扫描谱的歌词、延音记号、连线、反复和声部名称。重新打开 MSCZ 后，229 个音符事件、52 条歌词、24 个延音记号、4 条延音线及显式变音/符干/符杠均与独立参考一致；两页成品已查看。逐小节验收记录仍待完成，不把机器比对等同于所有新 PDF 都自动正确。详见[验证记录](verification/notation-validation.json)。
 
 ```powershell
 python -m unittest discover -s skill/musescore-score-reproduction/tests -v
 ```
 
-61 项测试涵盖原有比对逻辑、新 PDF 全页处理、所有乐章输出、漏谱验收拦截、超时、缓存恢复和带前提的局部修正。两项真实 PDF 准备测试需要 PyMuPDF 可导入；未安装时会明确跳过。完整测试请将本地依赖目录加入 `PYTHONPATH`。
+92 项测试涵盖原有比对逻辑、新 PDF 全页处理、所有乐章输出、漏谱验收拦截、超时、缓存恢复和带前提的局部修正。三项 PDF 相关测试需要 PyMuPDF 可导入；未安装时会明确跳过。完整测试请将本地依赖目录加入 `PYTHONPATH`。
 
 任何现成 OMR 都不能保证所有模糊扫描件、手写谱或任意记谱法一次自动百分之百正确。这个 skill 的目标是让执行者高效完成新谱的识别和纠错流程；它不会从无法辨认的像素猜出“确定正确”的音符。默认要求音乐内容一致，不要求字体、页边距等逐像素一致。
 
 旧的 [Ode](scores/ode.mscz)、[Greensleeves 打印版](scores/greensleeves.mscz)和[四声部版](scores/greensleeves-four-voices.mscz)保留为回归示例，**不是支持曲目白名单**。原始示例来源与 Public Domain 声明保留在 [examples](skill/musescore-score-reproduction/examples/) 中。
+
+## 增量校对与记号修正（2026-09-20）
+
+新增 `revision_review.py` 自动定位改动小节及受影响的跨小节记号；每次 rebuild 都生成 `changes.json`，校对页面直接显示全部成品页。未变化的 OMR 诊断和源页裁图复用哈希缓存，局部纠错不用重新识别整本。
+
+`reference_patch.py` 可在存在同版独立 MusicXML 时生成歌词、连线、装饰和演奏记号的修正建议；音符事件必须先一致，模糊定位会拒绝。没有独立源文件时仍从 PDF 读图修正，不要求用户额外提供参考文件。
+
+详见[记号范围与增量修正](skill/musescore-score-reproduction/references/notation-coverage.md)。补丁还支持 `scope: document` 修复标题或声部名称。升级检查器后旧报告会重新核验，不能沿用范围更窄的旧结论。

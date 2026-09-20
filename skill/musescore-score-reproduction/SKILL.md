@@ -35,6 +35,8 @@ If OMR is unavailable, use `run ... --prepare-only` for the source-page workbenc
 
 The user normally wants exact musical content, not identical fonts/margins. Musical text, accidental meaning, beams and collisions that conceal content are relevant. Read the [official handbook](https://handbook.musescore.org/) sections needed for the source's notation; [validated lessons](references/validated-lessons.md) links the specific sections and observed failures.
 
+Read [notation coverage and incremental correction](references/notation-coverage.md) for expanded symbol comparison, changed-measure review and optional independent-reference repair. Rebuild prioritizes affected measures without transferring approval. The workbench displays output pages and caches unchanged diagnostics/crops.
+
 ## Tool routing
 
 | Tool | Purpose |
@@ -43,6 +45,9 @@ The user normally wants exact musical content, not identical fonts/margins. Musi
 | `setup_omr.py` | Explicit hash-pinned project-local Windows OMR setup with full English OCR data |
 | `omr_engine.py` | Audiveris batch execution, saved project and symbol/system diagnostics |
 | `staff_inventory.py` | Independent five-line pixel hints to flag possible omitted staves |
+| `revision_review.py` | Changed measures, span context and downstream review targets |
+| `reference_patch.py` | Optional same-edition notation repair with exact note anchors |
+| `notation.py` | Lyrics, ornaments, technical notation, harmony and span semantics |
 | `musicxml_patch.py` | Guarded targeted XML corrections retaining other notation |
 | `score_pipeline.py` | Lower-level MSCZ creation/reopening/audit and per-score review |
 | `musicxml_audit.py`, `scorelib.py` | Rational-time events, voice/staff, span and supported notation comparison |

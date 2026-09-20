@@ -1,0 +1,607 @@
+{
+  "schema": 1,
+  "input_sha256": "2de0c2797f0b1562b5831d934545c3cbeec0e6b3d21e36da2fe79aabcf1aa127",
+  "reference_sha256": "9676f11a2b26488bcf30db90c15576caa1ea2a616b909e376d44b8b804e9d138",
+  "reference_evidence": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair",
+  "operations": [
+    {
+      "part": 1,
+      "measure": 1,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"100.23\" default-y=\"-30\">\n        <pitch>\n          <step>G</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>up</stem>\n        <lyric name=\"1\" number=\"1\"><syllabic>single</syllabic><text>Aus</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>in</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":1,\"onset\":\"0\",\"part\":1,\"pitch\":[\"G\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 2,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-30\">\n        <pitch>\n          <step>G</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <lyric name=\"1\" number=\"1\"><syllabic>begin</syllabic><text>mei</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>begin</syllabic><text>die</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":2,\"onset\":\"0\",\"part\":1,\"pitch\":[\"G\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 2,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"121.07\" default-y=\"-10\">\n        <pitch>\n          <step>D</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"1\" number=\"1\"><syllabic>end</syllabic><text>nes</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>end</syllabic><text>ser</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":2,\"onset\":\"2\",\"part\":1,\"pitch\":[\"D\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 3,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>3</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <dot default-x=\"30.49\" default-y=\"-15\" />\n        <stem>down</stem>\n        <lyric name=\"1\" number=\"1\"><syllabic>begin</syllabic><text>Her</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>begin</syllabic><text>Mor</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":1,\"duration\":\"3/2\",\"measure\":3,\"onset\":\"0\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 3,
+      "select": "note[3]",
+      "op": "replace",
+      "xml": "<note default-x=\"113.31\" default-y=\"-30\">\n        <pitch>\n          <step>G</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>up</stem>\n        <lyric name=\"1\" number=\"1\"><syllabic>end</syllabic><text>zens</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>middle</syllabic><text>gen</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":3,\"onset\":\"2\",\"part\":1,\"pitch\":[\"G\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 4,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-30\">\n        <pitch>\n          <step>G</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>3</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <dot default-x=\"30.49\" default-y=\"-25\" />\n        <stem>up</stem>\n        <lyric name=\"1\" number=\"1\"><syllabic>begin</syllabic><text>Grun</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>middle</syllabic><text>stun</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":1,\"duration\":\"3/2\",\"measure\":4,\"onset\":\"0\",\"part\":1,\"pitch\":[\"G\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 5,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-25\">\n        <pitch>\n          <step>A</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations><lyric name=\"1\" number=\"1\"><syllabic>end</syllabic><text>de</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>end</syllabic><text>de,</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":5,\"onset\":\"0\",\"part\":1,\"pitch\":[\"A\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 5,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"82.29\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"1\" number=\"1\"><syllabic>single</syllabic><text>sag'</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>begin</syllabic><text>dar</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":5,\"onset\":\"2\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 6,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-10\">\n        <pitch>\n          <step>D</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <lyric name=\"1\" number=\"1\"><syllabic>single</syllabic><text>ich</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>end</syllabic><text>zu</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":6,\"onset\":\"0\",\"part\":1,\"pitch\":[\"D\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 6,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"105.56\" default-y=\"-15\">\n        <pitch>\n          <step>C</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"1\" number=\"1\"><syllabic>single</syllabic><text>dir</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>mein</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":6,\"onset\":\"2\",\"part\":1,\"pitch\":[\"C\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 7,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"1\" number=\"1\"><syllabic>single</syllabic><text>Lob</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>begin</syllabic><text>Le</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":7,\"onset\":\"0\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 7,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"59.03\" default-y=\"-25\">\n        <pitch>\n          <step>A</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <lyric name=\"1\" number=\"1\"><syllabic>single</syllabic><text>und</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>middle</syllabic><text>be</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":7,\"onset\":\"1\",\"part\":1,\"pitch\":[\"A\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 8,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-30\">\n        <pitch>\n          <step>G</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations><lyric name=\"1\" number=\"1\"><syllabic>single</syllabic><text>Dank,</text></lyric><lyric name=\"2\" number=\"2\"><syllabic>end</syllabic><text>lang,</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":8,\"onset\":\"0\",\"part\":1,\"pitch\":[\"G\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 9,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"78.11\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>o</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":9,\"onset\":\"0\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 10,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>Gott</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":10,\"onset\":\"0\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 10,
+      "select": "note[3]",
+      "op": "replace",
+      "xml": "<note default-x=\"129.88\" default-y=\"-10\">\n        <pitch>\n          <step>D</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>in</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":10,\"onset\":\"2\",\"part\":1,\"pitch\":[\"D\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 11,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-10\">\n        <pitch>\n          <step>D</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>3</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <dot default-x=\"30.49\" default-y=\"-5\" />\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>begin</syllabic><text>dei</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":1,\"duration\":\"3/2\",\"measure\":11,\"onset\":\"0\",\"part\":1,\"pitch\":[\"D\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 11,
+      "select": "note[3]",
+      "op": "replace",
+      "xml": "<note default-x=\"129.88\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>end</syllabic><text>nem</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":11,\"onset\":\"2\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 12,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-25\">\n        <pitch>\n          <step>A</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations><lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>Thron,</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":12,\"onset\":\"0\",\"part\":1,\"pitch\":[\"A\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 12,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"118.95\" default-y=\"-30\">\n        <pitch>\n          <step>G</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>up</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>dir</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":12,\"onset\":\"2\",\"part\":1,\"pitch\":[\"G\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 13,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>zu</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":13,\"onset\":\"0\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 13,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"115.81\" default-y=\"-15\">\n        <pitch>\n          <step>C</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>Lob,</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":13,\"onset\":\"2\",\"part\":1,\"pitch\":[\"C\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 14,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-10\">\n        <pitch>\n          <step>D</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>Preis</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":14,\"onset\":\"0\",\"part\":1,\"pitch\":[\"D\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 14,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"104.46\" default-y=\"-15\">\n        <pitch>\n          <step>C</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>und</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":14,\"onset\":\"2\",\"part\":1,\"pitch\":[\"C\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 15,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>6</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <dot default-x=\"30.49\" default-y=\"-15\" />\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>begin</syllabic><text>Eh</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":1,\"duration\":\"3\",\"measure\":15,\"onset\":\"0\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 16,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-30\">\n        <pitch>\n          <step>G</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations><lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>ren</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":16,\"onset\":\"0\",\"part\":1,\"pitch\":[\"G\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 17,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"78.11\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>end</syllabic><text>durch</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":17,\"onset\":\"0\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 18,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-10\">\n        <pitch>\n          <step>D</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>begin</syllabic><text>Chri</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":18,\"onset\":\"0\",\"part\":1,\"pitch\":[\"D\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 18,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"125.31\" default-y=\"-15\">\n        <pitch>\n          <step>C</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>end</syllabic><text>stum,</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":18,\"onset\":\"2\",\"part\":1,\"pitch\":[\"C\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 19,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>begin</syllabic><text>un</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":19,\"onset\":\"0\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 19,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"102.75\" default-y=\"-25\">\n        <pitch>\n          <step>A</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>up</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>end</syllabic><text>sern</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":19,\"onset\":\"2\",\"part\":1,\"pitch\":[\"A\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 20,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-30\">\n        <pitch>\n          <step>G</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>3</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <dot default-x=\"30.49\" default-y=\"-25\" />\n        <stem>up</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>begin</syllabic><text>Her</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":1,\"duration\":\"3/2\",\"measure\":20,\"onset\":\"0\",\"part\":1,\"pitch\":[\"G\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 21,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-25\">\n        <pitch>\n          <step>A</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations><lyric name=\"2\" number=\"2\"><syllabic>end</syllabic><text>ren,</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":21,\"onset\":\"0\",\"part\":1,\"pitch\":[\"A\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 21,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"80.19\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>dein'</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":21,\"onset\":\"2\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 22,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-10\">\n        <pitch>\n          <step>D</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>begin</syllabic><text>ein</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":22,\"onset\":\"0\",\"part\":1,\"pitch\":[\"D\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 22,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"102.75\" default-y=\"-15\">\n        <pitch>\n          <step>C</step>\n          <octave>5</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>middle</syllabic><text>ge</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":22,\"onset\":\"2\",\"part\":1,\"pitch\":[\"C\",\"0\",5],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 23,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-20\">\n        <pitch>\n          <step>B</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>middle</syllabic><text>bor</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":23,\"onset\":\"0\",\"part\":1,\"pitch\":[\"B\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 23,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"72.67\" default-y=\"-25\">\n        <pitch>\n          <step>A</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <lyric name=\"2\" number=\"2\"><syllabic>end</syllabic><text>nen</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":23,\"onset\":\"1\",\"part\":1,\"pitch\":[\"A\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 24,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-30\">\n        <pitch>\n          <step>G</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations><lyric name=\"2\" number=\"2\"><syllabic>single</syllabic><text>Sohn.</text></lyric></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":24,\"onset\":\"0\",\"part\":1,\"pitch\":[\"G\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 2,
+      "measure": 5,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-232.39\">\n        <pitch>\n          <step>F</step>\n          <alter>1</alter>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":5,\"onset\":\"0\",\"part\":2,\"pitch\":[\"F\",\"1\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 2,
+      "measure": 8,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-242.39\">\n        <pitch>\n          <step>D</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":8,\"onset\":\"0\",\"part\":2,\"pitch\":[\"D\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 2,
+      "measure": 10,
+      "select": "note[5]",
+      "op": "replace",
+      "xml": "<note default-x=\"129.88\" default-y=\"-227.39\">\n        <pitch>\n          <step>G</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>2</duration>\n        <tie type=\"start\" /><voice>1</voice>\n        <type>quarter</type>\n        <stem>up</stem>\n        <notations><tied type=\"start\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":10,\"onset\":\"2\",\"part\":2,\"pitch\":[\"G\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 2,
+      "measure": 12,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-232.39\">\n        <pitch>\n          <step>F</step>\n          <alter>1</alter>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":12,\"onset\":\"0\",\"part\":2,\"pitch\":[\"F\",\"1\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 2,
+      "measure": 16,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-237.39\">\n        <pitch>\n          <step>E</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":16,\"onset\":\"0\",\"part\":2,\"pitch\":[\"E\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 2,
+      "measure": 21,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-192.91\">\n        <pitch>\n          <step>F</step>\n          <alter>1</alter>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":21,\"onset\":\"0\",\"part\":2,\"pitch\":[\"F\",\"1\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 2,
+      "measure": 24,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-202.91\">\n        <pitch>\n          <step>D</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":24,\"onset\":\"0\",\"part\":2,\"pitch\":[\"D\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 3,
+      "measure": 5,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-379.78\">\n        <pitch>\n          <step>D</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":5,\"onset\":\"0\",\"part\":3,\"pitch\":[\"D\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 3,
+      "measure": 8,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-389.78\">\n        <pitch>\n          <step>B</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":8,\"onset\":\"0\",\"part\":3,\"pitch\":[\"B\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 3,
+      "measure": 12,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-379.78\">\n        <pitch>\n          <step>D</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":12,\"onset\":\"0\",\"part\":3,\"pitch\":[\"D\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 3,
+      "measure": 16,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-384.78\">\n        <pitch>\n          <step>C</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":16,\"onset\":\"0\",\"part\":3,\"pitch\":[\"C\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 3,
+      "measure": 21,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-300.82\">\n        <pitch>\n          <step>D</step>\n          <octave>4</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":21,\"onset\":\"0\",\"part\":3,\"pitch\":[\"D\",\"0\",4],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 3,
+      "measure": 24,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-310.82\">\n        <pitch>\n          <step>B</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":24,\"onset\":\"0\",\"part\":3,\"pitch\":[\"B\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 5,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-612.17\">\n        <pitch>\n          <step>D</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":5,\"onset\":\"0\",\"part\":4,\"pitch\":[\"D\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 8,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-632.17\">\n        <pitch>\n          <step>G</step>\n          <octave>2</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":8,\"onset\":\"0\",\"part\":4,\"pitch\":[\"G\",\"0\",2],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 11,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"100.53\" default-y=\"-627.17\">\n        <pitch>\n          <step>A</step>\n          <octave>2</octave>\n          </pitch>\n        <duration>1</duration>\n        <voice>1</voice>\n        <type>eighth</type>\n        <stem>up</stem>\n        </note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1/2\",\"measure\":11,\"onset\":\"3/2\",\"part\":4,\"pitch\":[\"A\",\"0\",2],\"ratio\":null,\"staff\":\"1\",\"type\":\"eighth\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 11,
+      "select": "note[3]",
+      "op": "replace",
+      "xml": "<note default-x=\"129.88\" default-y=\"-632.17\">\n        <pitch>\n          <step>G</step>\n          <octave>2</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>up</stem>\n        </note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":11,\"onset\":\"2\",\"part\":4,\"pitch\":[\"G\",\"0\",2],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 12,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-612.17\">\n        <pitch>\n          <step>D</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":12,\"onset\":\"0\",\"part\":4,\"pitch\":[\"D\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 12,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"118.95\" default-y=\"-607.17\">\n        <pitch>\n          <step>E</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>2</duration>\n        <tie type=\"start\" /><voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <notations><tied type=\"start\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":12,\"onset\":\"2\",\"part\":4,\"pitch\":[\"E\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 13,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-607.17\">\n        <pitch>\n          <step>E</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>2</duration>\n        <tie type=\"stop\" /><voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <notations><tied type=\"stop\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":13,\"onset\":\"0\",\"part\":4,\"pitch\":[\"E\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 13,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"56.52\" default-y=\"-612.17\">\n        <pitch>\n          <step>D</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        </note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":13,\"onset\":\"1\",\"part\":4,\"pitch\":[\"D\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 13,
+      "select": "note[3]",
+      "op": "replace",
+      "xml": "<note default-x=\"115.81\" default-y=\"-617.17\">\n        <pitch>\n          <step>C</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>2</duration>\n        <voice>1</voice>\n        <type>quarter</type>\n        <stem>up</stem>\n        </note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":13,\"onset\":\"2\",\"part\":4,\"pitch\":[\"C\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 16,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-617.17\">\n        <pitch>\n          <step>C</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":16,\"onset\":\"0\",\"part\":4,\"pitch\":[\"C\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 21,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-493.72\">\n        <pitch>\n          <step>D</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>down</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":21,\"onset\":\"0\",\"part\":4,\"pitch\":[\"D\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 21,
+      "select": "note[2]",
+      "op": "replace",
+      "xml": "<note default-x=\"80.19\" default-y=\"-478.72\">\n        <pitch>\n          <step>G</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>2</duration>\n        <tie type=\"start\" /><voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <notations><tied type=\"start\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":21,\"onset\":\"2\",\"part\":4,\"pitch\":[\"G\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 22,
+      "select": "note[3]",
+      "op": "replace",
+      "xml": "<note default-x=\"102.75\" default-y=\"-488.72\">\n        <pitch>\n          <step>E</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>2</duration>\n        <tie type=\"start\" /><voice>1</voice>\n        <type>quarter</type>\n        <stem>down</stem>\n        <notations><tied type=\"start\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1\",\"measure\":22,\"onset\":\"2\",\"part\":4,\"pitch\":[\"E\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"quarter\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 23,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-488.72\">\n        <pitch>\n          <step>E</step>\n          <octave>3</octave>\n          </pitch>\n        <duration>1</duration>\n        <tie type=\"stop\" /><voice>1</voice>\n        <type>eighth</type>\n        <stem>down</stem>\n        <beam number=\"1\">begin</beam>\n        <notations><tied type=\"stop\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"1/2\",\"measure\":23,\"onset\":\"0\",\"part\":4,\"pitch\":[\"E\",\"0\",3],\"ratio\":null,\"staff\":\"1\",\"type\":\"eighth\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 4,
+      "measure": 24,
+      "select": "note[1]",
+      "op": "replace",
+      "xml": "<note default-x=\"12.5\" default-y=\"-513.72\">\n        <pitch>\n          <step>G</step>\n          <octave>2</octave>\n          </pitch>\n        <duration>4</duration>\n        <voice>1</voice>\n        <type>half</type>\n        <stem>up</stem>\n        <notations><fermata type=\"upright\" /></notations></note>\n      ",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; matched note anchor {\"dots\":0,\"duration\":\"2\",\"measure\":24,\"onset\":\"0\",\"part\":4,\"pitch\":[\"G\",\"0\",2],\"ratio\":null,\"staff\":\"1\",\"type\":\"half\",\"voice\":\"1\"}"
+    },
+    {
+      "part": 1,
+      "measure": 8,
+      "select": "barline[1]",
+      "op": "remove",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; independently checked barline"
+    },
+    {
+      "part": 1,
+      "measure": 8,
+      "select": ".",
+      "op": "insert",
+      "xml": "<barline location=\"right\"><repeat direction=\"backward\" /></barline>",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; independently checked barline"
+    },
+    {
+      "part": 2,
+      "measure": 8,
+      "select": "barline[1]",
+      "op": "remove",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; independently checked barline"
+    },
+    {
+      "part": 2,
+      "measure": 8,
+      "select": ".",
+      "op": "insert",
+      "xml": "<barline location=\"right\"><repeat direction=\"backward\" /></barline>",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; independently checked barline"
+    },
+    {
+      "part": 3,
+      "measure": 8,
+      "select": "barline[1]",
+      "op": "remove",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; independently checked barline"
+    },
+    {
+      "part": 3,
+      "measure": 8,
+      "select": ".",
+      "op": "insert",
+      "xml": "<barline location=\"right\"><repeat direction=\"backward\" /></barline>",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; independently checked barline"
+    },
+    {
+      "part": 4,
+      "measure": 8,
+      "select": "barline[1]",
+      "op": "remove",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; independently checked barline"
+    },
+    {
+      "part": 4,
+      "measure": 8,
+      "select": ".",
+      "op": "insert",
+      "xml": "<barline location=\"right\"><repeat direction=\"backward\" /></barline>",
+      "reason": "Withheld music21 BWV269 source used to generate this exact two-page scanned integration fixture; independent oracle checked after PDF-only OMR and note repair; independently checked barline"
+    }
+  ],
+  "unresolved_audit_issues": [],
+  "requires_source_review": true,
+  "scope": "Only ties, note notations, lyrics and barlines; notes, directions, signatures, harmony and other score data are retained."
+}

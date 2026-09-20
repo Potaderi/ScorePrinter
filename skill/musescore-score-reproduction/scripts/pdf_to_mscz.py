@@ -1,13 +1,16 @@
 """New PDF -> local OMR -> ALL score candidates -> MSCZ -> source review/correction."""
 import argparse
 import html
+import hashlib
+import re
 import shutil
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from types import SimpleNamespace
 
-from scorelib import dump, load, sha, xml_root
+from scorelib import dump, load, sha, xml_root, token
+from revision_review import revision_changes
 from score_pipeline import convert, executable, finalize as finalize_score, run_ms
 from omr_engine import find_engine, run_engine, project_diagnostics
 from staff_inventory import staff_hints, coverage_findings
@@ -106,6 +109,15 @@ def write_index(job, state):
         parts.append(f'<li>{html.escape(item["id"])}: '
                      f'<a href="{rev}/score.mscz">MSCZ</a> · <a href="{rev}/score.pdf">PDF</a> · '
                      f'<a href="{rev}/audit.json">audit</a> · <a href="{rev}/review.json">review</a></li>')
+        folder = contained(job, rev)
+        if (folder/'changes.json').exists():
+            changes = load(folder/'changes.json')
+            labels = ', '.join(f'P{r["part"]}/M{r["measure"]}' for r in changes['review_targets'])
+            parts.append(f'<li><a href="{rev}/changes.json">Changed measures</a>: {html.escape(labels)}</li>')
+        images = sorted(folder.glob('score*.png'), key=lambda p: [int(t) if t.isdigit() else t for t in re.split(r'(\d+)',p.name)])
+        for image in images:
+            parts.append(f'<li><details open><summary>{html.escape(item["id"])} / {html.escape(image.name)}</summary>'
+                         f'<img loading="lazy" src="{relative(job,image)}"></details></li>')
     parts.append('</ul><h2>Every original page</h2>')
     for page in state['pages']:
         parts.append(f'<details open><summary>Page {page["page"]}</summary>'
@@ -144,8 +156,16 @@ def make_triage(job, state, deps=None):
             items.append({'reason': 'engine warning', 'details': warning, 'attempt': attempt})
         for project in sorted((folder/'export').rglob('*.omr')):
             try:
-                diagnostics = project_diagnostics(project)
-                dump(project.with_suffix('.diagnostics.json'), diagnostics)
+                cache_path = project.with_suffix('.diagnostics-cache.json')
+                signature = {'project_sha256': sha(project),
+                             'parser_sha256': sha(Path(__file__).with_name('omr_engine.py'))}
+                cache = load(cache_path) if cache_path.exists() else {}
+                if cache.get('signature') == signature:
+                    diagnostics = cache['diagnostics']
+                else:
+                    diagnostics = project_diagnostics(project)
+                    dump(cache_path, {'signature': signature, 'diagnostics': diagnostics})
+                    dump(project.with_suffix('.diagnostics.json'), diagnostics)
                 if report.get('preprocessing',{}).get('rotate',0):
                     for item in diagnostics['findings']+diagnostics['systems']:
                         item.pop('bbox',None)
@@ -173,6 +193,9 @@ def make_triage(job, state, deps=None):
             items.append({'reason': 'Audit unavailable for converted file', 'score': score['id']})
             continue
         report = load(current/'audit.json')
+        if (current/'changes.json').exists():
+            for target in load(current/'changes.json')['review_targets']:
+                items.append({'reason': 'recheck changed measure', 'score': score['id'], 'location': target})
         for issue in report['issues']:
             items.append(dict(issue, score=score['id']))
         for category, difference in report['differences'].items():
@@ -192,8 +215,10 @@ def make_triage(job, state, deps=None):
                                    box[2]*page.rect.width, box[3]*page.rect.height)
                 if clip.is_empty:
                     continue
-                name = f'crops/item-{index:05d}.png'
-                page.get_pixmap(dpi=240, clip=clip, alpha=False).save(job/name)
+                signature = token([state['source_sha256'], number, box, 240])
+                name = 'crops/'+hashlib.sha256(signature.encode()).hexdigest()+'.png'
+                if not (job/name).is_file():
+                    page.get_pixmap(dpi=240, clip=clip, alpha=False).save(job/name)
                 item['crop'] = name
     for item in items:
         if item.get('kind') == 'coverage':
@@ -206,6 +231,7 @@ def make_triage(job, state, deps=None):
 def make_revision(job, state, score, candidate, musescore, reference=None, timeout=180):
     exe = executable(musescore)
     revisions = score.setdefault('revisions', [])
+    previous = contained(job, score['current'])/'roundtrip.musicxml' if score.get('current') else None
     index = len(revisions)+1
     folder = job/'scores'/score['id']/f'rev-{index:03d}'
     inputs = job/'inputs'
@@ -239,6 +265,8 @@ def make_revision(job, state, score, candidate, musescore, reference=None, timeo
         score['mscz_sha256'] = sha(folder/'score.mscz')
         entry['state'] = 'REVIEW_REQUIRED'
         entry['audit_status'] = load(folder/'audit.json')['status']
+        if previous is not None and previous.is_file():
+            dump(folder/'changes.json', revision_changes(previous, folder/'roundtrip.musicxml'))
         # Successful conversion never certifies a PDF reading.
         state['status'] = 'REVIEW_REQUIRED'
         review = load(job/'source-review.json')

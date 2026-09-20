@@ -69,6 +69,10 @@ def finalize(folder):
     for field,path in [('input_sha256',p['input']),('expected_sha256',p['expected']),('musicxml_sha256',folder/'roundtrip.musicxml')]:
         if not Path(path).is_file() or p[field]!=sha(path):errors.append('Changed audit input: '+field)
     if not a.get('equal_in_checked_scope'):errors.append('Semantic mismatches remain')
+    # Recompute so an old, narrower PASS cannot survive checker upgrades.
+    current=audit(p['expected'],folder/'roundtrip.musicxml',display='display' in a.get('scope',[]),
+                  layout='layout' in a.get('scope',[]),merge=a.get('mode')=='condensed')
+    if current!=a:errors.append('Audit is stale for the current checker; rebuild and review the new revision')
     required={(e['part'],e['measure'],e['staff']) for e in parse(folder/'roundtrip.musicxml')['events']}
     supplied=[(e['part'],e['measure'],e['staff']) for e in review.get('measures',[])]
     if set(supplied)!=required or len(supplied)!=len(required):errors.append('Incomplete or duplicate review coverage')

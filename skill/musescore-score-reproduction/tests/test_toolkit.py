@@ -137,6 +137,10 @@ class AuditTests(unittest.TestCase):
         with redirect_stdout(io.StringIO()):self.assertEqual(1,finalize(folder))
         r.update(reference_independently_checked=True,reviewer='Synthetic test fixture',method='Unit test only',measures=[{'part':1,'measure':i,'staff':'1','source_content':'pass','notation_and_beams':'pass','evidence':'Synthetic test fixture'} for i in (1,2)]);dump(folder/'review.json',r)
         with redirect_stdout(io.StringIO()):self.assertEqual(0,finalize(folder))
+        old_audit=json.loads((folder/'audit.json').read_text());stale=copy.deepcopy(old_audit);stale['schema']=0
+        dump(folder/'audit.json',stale);r['audit_sha256']=sha(folder/'audit.json');dump(folder/'review.json',r)
+        with redirect_stdout(io.StringIO()):self.assertEqual(1,finalize(folder))
+        dump(folder/'audit.json',old_audit);r['audit_sha256']=sha(folder/'audit.json');dump(folder/'review.json',r)
         (folder/'score.mscz').write_bytes(b'changed')
         with redirect_stdout(io.StringIO()):self.assertEqual(1,finalize(folder))
     def test_protected_inventory(self):

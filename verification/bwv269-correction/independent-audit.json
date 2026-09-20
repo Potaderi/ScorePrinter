@@ -1,0 +1,51 @@
+{
+  "schema": 2,
+  "expected_sha256": "9676f11a2b26488bcf30db90c15576caa1ea2a616b909e376d44b8b804e9d138",
+  "actual_sha256": "24c65b5bd6c6038392b6519b7ece0d70b99d3f0eb268528ab922fe63daac05ca",
+  "mode": "voices",
+  "scope": [
+    "events",
+    "attributes",
+    "marks",
+    "measures",
+    "labels",
+    "display"
+  ],
+  "passed": true,
+  "equal_in_checked_scope": true,
+  "status": "PASS",
+  "expected_events": 229,
+  "actual_events": 229,
+  "issues": [],
+  "differences": {
+    "events": {
+      "missing": [],
+      "extra": []
+    },
+    "attributes": {
+      "missing": [],
+      "extra": []
+    },
+    "marks": {
+      "missing": [],
+      "extra": []
+    },
+    "measures": {
+      "missing": [],
+      "extra": []
+    },
+    "labels": {
+      "missing": [],
+      "extra": []
+    },
+    "display": {
+      "missing": [],
+      "extra": []
+    }
+  },
+  "limitations": [
+    "Equality does not establish that the expected score was correctly read from the source.",
+    "Content mode excludes explicit accidentals/stems/beams; enable --display for their comparison.",
+    "Layout, header metadata, timbre, playback realization, fonts and pixels are not certified."
+  ]
+}

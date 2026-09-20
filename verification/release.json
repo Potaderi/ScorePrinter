@@ -1,13 +1,13 @@
 {
-  "validated_on": "2026-09-18",
+  "validated_on": "2026-09-20",
   "python": "3.13",
   "musescore": "4.6.3",
   "audiveris": "5.11.0",
-  "unit_tests": 61,
-  "script_count": 13,
+  "unit_tests": 92,
+  "script_count": 16,
   "archive": "dist/musescore-score-reproduction.zip",
-  "archive_sha256": "b9d67a7be2f06c76470a1f1404d5d677dbc9b32667fb6a6bde5c246c38c41786",
-  "archive_bytes": 253097,
+  "archive_sha256": "a74f2446136391fdedc529a3c674651df5faa6c025ba6968fdeee136fa06d1ea",
+  "archive_bytes": 269782,
   "artifact_sha256": {
     "scores/greensleeves-four-voices.mscz": "7d5ad3a12a20f68448b0078342a009f03468db90c28167b3832bb32f165516ac",
     "scores/greensleeves.mscz": "ae707dc0caea117bb42b1b4f9ea763aff3c50cffbb85a280b14309c008a8a1b6",
@@ -19,5 +19,6 @@
   },
   "new_pdf_validation": "verification/new-pdf-validation.json",
   "notes": "New PDF jobs require Audiveris/OMR, complete source-page review, targeted correction and whole-job finalization. Demonstrations do not certify arbitrary input automatically.",
-  "zip_extracted_tests": "61 passed"
+  "zip_extracted_tests": "92 passed",
+  "notation_validation": "verification/notation-validation.json"
 }

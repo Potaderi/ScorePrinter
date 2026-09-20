@@ -16,10 +16,16 @@ def apply_patch(source, specification):
     for operation in operations:
         if not operation.get('reason', '').strip():
             raise ValueError('Every correction needs a source-reading reason')
-        if int(operation['part']) < 1 or int(operation['measure']) < 1:
-            raise ValueError('Part/measure addresses are 1-based ordinals')
-        part = root.findall('part')[int(operation['part'])-1]
-        measure = part.findall('measure')[int(operation['measure'])-1]
+        scope = operation.get('scope','measure')
+        if scope == 'document':
+            measure = root
+        elif scope == 'measure':
+            if int(operation['part']) < 1 or int(operation['measure']) < 1:
+                raise ValueError('Part/measure addresses are 1-based ordinals')
+            part = root.findall('part')[int(operation['part'])-1]
+            measure = part.findall('measure')[int(operation['measure'])-1]
+        else:
+            raise ValueError('Unknown correction scope: '+str(scope))
         selector = operation.get('select', '.')
         targets = [measure] if selector == '.' else measure.findall(selector)
         if len(targets) != 1:
