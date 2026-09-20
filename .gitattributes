@@ -4,3 +4,6 @@
 *.png binary
 *.mscz binary
 *.zip binary
+
+# Audit evidence and guarded patches depend on exact XML bytes.
+verification/**/*.musicxml -text
